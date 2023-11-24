@@ -1,174 +1,39 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Calculator</title>
 </head>
 <body>
-
-<!--=========== HEADER ===============-->
-<header class="text-black bg-gray-900 body-font">
-  <div class="container mx-auto flex flex-wrap p-3 flex-col md:flex-row ">
-    <a class="flex title-font font-medium items-center text-white mb-4 md:mb-0">
-      <span class="ml-3 italic underline text-4xl">Borşa Restaurant</span>
-    </a>
-    <nav class=" flex-wrap items-center flex lg:w-2/5 text-base md:ml-auto">
-     <a href="home.htm" class="mr-4 text-gray-500 hover:text-white text-xl">Home</a>
-      <a href="Specials.htm" class="mr-4 text-gray-500 hover:text-white text-xl">Specials</a>
-      <a href="Chef.htm" class="mr-4 text-gray-500 hover:text-white text-xl">Chef</a>
-      <a href="Menu.htm" class="mr-4 text-gray-500 hover:text-white text-xl">Menu</a>
-       <a href="about.htm" class="mr-4 text-gray-500 hover:text-white text-xl">About</a>
-      <a href="feedback.htm" class="mr-4 text-gray-500 hover:text-white text-xl">Feedback</a>
-    </nav>
-  </div>
-</header>
-<!--=========== END OF HEADER ===============-->
-
-
-
-<!--=========== SECTION ===============-->
-<section class="text-gray-900 bg-white body-font">
-
- <div class="container mx-auto flex flex-col">
-  <img src="bg-2.jpg"  class="responsive"/>
-    <div class="text-center ">
-      <h1 class="title-font text-4xl text-3xl mb-4 font-medium text-Black">Best Turkish Restaurant, Folks and Fun</h1>
-      <p class="mb-8 italic text-xl">Restaurants are known to provide excellent social settings and you could enjoy a wonderful meal amidst friends, family, and great ambiance. Restaurants are great settings for business meetings and informal meetings or for socialising with friends.Turkish cuisine is one of the world’s top cuisines, joining the ranks of French, Chinese, Italian, and the like. Like the country’s cultural mosaic, the food of Turkey is very colorful and contains countless different influences and tastes. The cuisine of Turkey has continued to evolve over centuries, deriving influence from its rich history of lands that hosted first the Byzantine, and then the Ottoman Empires.The restaurant offers delicious dining options, with Italian authentic flavor. Waiters in the restaurant are friendly and respectful.This place is no less than a typical example of how to build a restaurant.
-The restaurant serves many famous Turkish meals.The chicken soup with cream is a great start to any meal, and I have not found a restaurant serving it as here. I prefer the Chicken Caesar Salad after it.My favorite dishes are the fettuccine Alfredo pasta with chicken, grilled chicken with cream and mushroom sauce. I love pizza of all kinds. They are all delicious and different options. Parmesan cheese is a good choice to accompany any Turkish dish..</p>
-    </div>
-  </div>
-
-
-
- <div class="container mx-auto flex flex-col">
-  <img src="intro-bg12.jpg"  class="responsive"/>
-    <div class="text-center ">
-      <h1 class="title-font text-4xl text-3xl mb-4 font-medium text-Black">Expect the best Eat healthy</h1>
-      <p class="mb-8 italic text-xl">Turkish cuisine is one of the world’s top cuisines, joining the ranks of French, Chinese, Italian, and the like. Like the country’s cultural mosaic, the food of Turkey is very colorful and contains countless different influences and tastes. The cuisine of Turkey has continued to evolve over centuries, deriving influence from its rich history of lands that hosted first the Byzantine, and then the Ottoman Empires..</p>
-    </div>
-  </div>
-
- 
-
-</section>
-<!--=========== END OF SECTION ===============-->
-
-
-
-<!--=========== FOOTER ===============-->
-<footer class="text-gray-400 bg-gray-900 body-font">  
-  <div class="container px-5 py-10 mx-auto flex md:items-center  ">
-    <div class="w-64  md:mx-0 mx-auto text-center md:text-left md:mt-0 mt-10">
-      <a class="flex title-font font-medium items-center md:justify-start justify-center text-white">
-
-        <span class="ml-3 italic text-2xl">Borşa Restaurant</span>
-      </a>
-      <p class="mt-1 text-sm text-gray-500">Address: Kandilli, Kandilli Cad, Liseli Sk. No: 12, 34684 Üsküdar/İstanbul, Turkey</p>
+    <div class="calculator">
+        <div class="output">
+            <div class="result" id="result">0</div>
+        </div>
+        <div class="buttons">
+            <button class="btn" onclick="clearResult()">C</button>
+            <button class="btn" onclick="appendToResult('7')">7</button>
+            <button class="btn" onclick="appendToResult('8')">8</button>
+            <button class="btn" onclick="append
+            
+            ToResult('9')">9</button>
+            <button class="btn" onclick="appendToResult('+')">+</button>
+            <button class="btn" onclick="appendToResult('4')">4</button>
+            <button class="btn" onclick="appendToResult('5')">5</button>
+            <button class="btn" onclick="appendToResult('6')">6</button>
+            <button class="btn" onclick="appendToResult('-')">-</button>
+            <button class="btn" onclick="appendToResult('1')">1</button>
+            <button class="btn" onclick="appendToResult('2')">2</button>
+            <button class="btn" onclick="appendToResult('3')">3</button>
+            <button class="btn" onclick="appendToResult('*')">*</button>
+            <button class="btn" onclick="appendToResult('.')">.</button>
+            <button class="btn" onclick="appendToResult('0')">0</button>
+            <button class="btn" onclick="calculateResult()">=</button>
+            
+        </div>
     </div>
 
-    <div class="flex-grow flex flex-wrap md:pr-20 -mb-10 md:text-left text-center order-first">
-      <div class="lg:w-1/4 md:w-1/2 w-full px-4">
-        <h2 class="title-font font-medium text-white tracking-widest text-sm mb-3">RESERVATION</h2>
-        <nav class="list-none mb-10">
-          <li>
-            <a class="text-gray-400 hover:text-white ">PLease Call</a>
-          </li>
-          <li>
-            <a class="text-gray-400 hover:text-white">(216) 460 03 04</a>
-          </li>
-          <li>
-            <a class="text-gray-400 hover:text-white">(216) 460 03 05</a>
-          </li>
-          <li>
-            <a class="text-gray-400 hover:text-white">(216) 460 03 06</a>
-          </li>
-        </nav>
-      </div>
-
-
-      <div class="lg:w-1/4 md:w-1/2 w-full px-4">
-        <h2 class="title-font font-medium text-white tracking-widest text-sm mb-3">OPENING HOURS</h2>
-        <nav class="list-none mb-10">
-          <li>
-            <a class="text-gray-400 hover:text-white">Mon-Thurs: 10:00 AM</a>
-          </li>
-          <li>
-            <a class="text-gray-400 hover:text-white">Fri-Sun: 11:00 AM</a>
-          </li>
-          <li>
-            <a class="text-gray-400 hover:text-white">Closes 10:00 PM</a>
-          </li>
-        </nav>
-
-
-      </div>
-      <div class="lg:w-1/4 md:w-1/2 w-full px-4">
-        <h2 class="title-font font-medium text-white tracking-widest text-sm mb-3">SERVICES OPTION</h2>
-        <nav class="list-none mb-10">
-          <li>
-            <a class="text-gray-400 hover:text-white">Dine-in</a>
-          </li>
-          <li>
-            <a class="text-gray-400 hover:text-white">Take-away</a>
-          </li>
-        </nav>
-      </div>
-
-
-      <div class="lg:w-1/4 md:w-1/2 w-full px-4">
-        <h2 class="title-font font-medium text-white tracking-widest text-sm mb-3">LOCATED IN </h2>
-        <nav class="list-none mb-10">
-          <li>
-            <a class="text-gray-400 hover:text-white"> Sakıp Sabanc</a>
-          </li>
-          <li>
-            <a class="text-gray-400 hover:text-white">Kindili Education</a>
-          </li>
-          <li>
-            <a class="text-gray-400 hover:text-white">Culture Centre</a>
-          </li>
-        </nav>
-      </div>
-    </div>
-  </div>
-
-
-
-  <div class="bg-gray-800 bg-opacity-75">
-    <div class="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
-      <p class="text-gray-400 text-sm text-center sm:text-left">© 2022 PROJECT BY  NAMEERA SIDDIQUI
-        <a href="https://www.facebook.com/borsarestaurant/" class="text-gray-500 ml-1" >@BorşaRestaurant</a>
-      </p>
-
-
-
-      <span class="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start">
-        <a class="text-gray-400">
-          <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
-            <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
-          </svg>
-        </a>
-
-        <a class="ml-3 text-gray-400">
-          <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
-            <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
-          </svg>
-        </a>
-
-        <a class="ml-3 text-gray-400">
-          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
-            <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
-            <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
-          </svg>
-        </a>
-       </span>
-    </div>
-  </div>
-</footer>
-<!--=========== END OF FOOTER ===============-->
-
-
-
+    <script src="script.js"></script>
 </body>
 </html>
